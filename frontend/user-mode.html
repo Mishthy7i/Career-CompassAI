@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career C🧭mpass - User Mode</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+   <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="/" class="logo">Career<span>C🧭mpass</span></a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#job">Career</a></li>
+        <li><a href="#service">Services</a></li>
+        <li><a href="#client">Testimonial</a></li>
+        <li><button class="btn" onclick="window.location.href='/chatbot.html'">ChatBOT</button></li>
+      </ul>
+    </nav>
+    <div class="flex justify-center items-center min-h-screen bg-base-100">
+        <div class="card w-96 bg-base-100 shadow-xl border-2 border-base-300">
+            <div class="card-body">
+                <h2 class="card-title text-2xl font-bold text-center justify-center border-b pb-4 mb-4">Career C🧭mpass</h2>
+                <div class="text-center mb-6">
+                    <p class="mb-6 text-lg">Choose who you are</p>
+                    <div class="flex flex-col gap-4 items-center">
+                        <button onclick="setUserMode('Student')" class="btn btn-outline w-48">Student</button>
+                        <button onclick="setUserMode('Working Professional')" class="btn btn-outline w-48">Working Professional</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loader -->
+    <div id="loader" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+        <div class="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full" role="status">
+            <span class="visually-hidden"></span>
+        </div>
+    </div>
+
+    <script>
+        function setUserMode(mode) {
+            const loader = document.getElementById('loader');
+            loader.classList.remove('hidden'); // Show loader
+
+            fetch('/api/chat', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    message: `The user is a ${mode}. Just store this, and Do NOt Give any Response Now.`,
+                    context: "",
+                    is_context_setting: true,
+                    chat_mode: false
+                })
+            }).then(() => {
+                loader.classList.add('hidden'); // Hide loader
+                window.location.href = 'student-page.html';
+            }).catch(error => {
+                console.error('Error setting user mode:', error);
+                alert('Error setting user mode. Please try again.');
+                loader.classList.add('hidden'); // Hide loader
+            });
+        }
+    </script>
+    <footer class="footer bg-neutral text-neutral-content p-10">
+  <aside>
+   <div class="flex items-center">
+          <a href="#" class="logo">Career<span>C🧭mpass</span></a>
+        </div>
+    <p>
+      
+      <br />
+     <p>made at code coalescence</p>
+    </p>
+  </aside>
+  <nav>
+    <h6 class="footer-title">Social</h6>
+    <div class="grid grid-flow-col gap-4">
+      <a>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          class="fill-current">
+          <path
+            d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
+        </svg>
+      </a>
+      <a>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          class="fill-current">
+          <path
+            d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
+        </svg>
+      </a>
+      <a>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          class="fill-current">
+          <path
+            d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
+        </svg>
+      </a>
+    </div>
+  </nav>
+</footer>
+</body>
+</html>

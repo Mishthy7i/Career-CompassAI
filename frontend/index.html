@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="/static/styles.css" />
+    <title>Career C🧭mpass AI</title>
+  </head>
+
+  <script defer>
+    const menuBtn = document.getElementById("menu-btn");
+    const navLinks = document.getElementById("nav-links");
+    const menuBtnIcon = menuBtn.querySelector("i");
+
+    menuBtn.addEventListener("click", (e) => {
+      navLinks.classList.toggle("open");
+
+      const isOpen = navLinks.classList.contains("open");
+      menuBtnIcon.setAttribute(
+        "class",
+        isOpen ? "ri-close-line" : "ri-menu-line"
+      );
+    });
+
+    navLinks.addEventListener("click", (e) => {
+      navLinks.classList.remove("open");
+      menuBtnIcon.setAttribute("class", "ri-menu-line");
+    });
+
+    const scrollRevealOption = {
+      distance: "50px",
+      origin: "bottom",
+      duration: 1000,
+    };
+
+    ScrollReveal().reveal(".header__container h2", {
+      ...scrollRevealOption,
+    });
+    ScrollReveal().reveal(".header__container h1", {
+      ...scrollRevealOption,
+      delay: 500,
+    });
+    ScrollReveal().reveal(".header__container p", {
+      ...scrollRevealOption,
+      delay: 1000,
+    });
+    ScrollReveal().reveal(".header__btns", {
+      ...scrollRevealOption,
+      delay: 1500,
+    });
+
+    ScrollReveal().reveal(".steps__card", {
+      ...scrollRevealOption,
+      interval: 500,
+    });
+
+    ScrollReveal().reveal(".explore__card", {
+      duration: 1000,
+      interval: 500,
+    });
+
+    ScrollReveal().reveal(".job__card", {
+      ...scrollRevealOption,
+      interval: 500,
+    });
+
+    ScrollReveal().reveal(".offer__card", {
+      ...scrollRevealOption,
+      interval: 500,
+    });
+  </script>
+  <body>
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="#" class="logo">Career<span>C🧭mpass</span></a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#job">Career</a></li>
+        <li><a href="#service">Services</a></li>
+        <li><a href="#client">Testimonial</a></li>
+        <li>
+          <button class="btn" onclick="window.location.href='/chatbot.html'">
+            ChatBOT
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <header class="section__container header__container" id="home">
+      <img src="assets/doctor.png" alt="header" />
+      <img src="assets/twitter.png" alt="header" />
+      <img src="assets/police.png" alt="header" />
+      <img src="assets/engineer.png" alt="header" />
+      <img src="assets/chef.png" alt="header" />
+      <img src="assets/lawyer.png" alt="header" />
+      <h2>
+        <img src="assets/bag.png" alt="bag" />
+        An AI Powered Career Guidance Platform
+      </h2>
+      <h1>Analyze, Plan &<br />Get Your <span>Perfect Career</span></h1>
+      <p>
+        "We believe career guidance shouldn’t be a gamble. With AI-driven
+        insights, we analyze your skills, interests, and goals to create a
+        career roadmap that’s made just for you. Whether you’re a student
+        confused about college choices or a professional seeking a switch, our
+        platform ensures you make data-driven, confident career decisions."
+      </p>
+      <div class="header__btns">
+        <button class="btn" onclick="window.location.href='intro.html'">
+          Let's Begin
+        </button>
+        <a href="#">
+          <span><i class="ri-play-fill"></i></span>
+          How It Works?
+        </a>
+      </div>
+    </header>
+
+    <section class="steps" id="about">
+      <div class="section__container steps__container">
+        <h2 class="section__header">
+          Find Your Perfect Career in <span>4 Simple Steps</span>
+        </h2>
+        <p class="section__description">
+          Follow our smart, AI-powered process to discover your ideal career
+          path and take your next big step with confidence!
+        </p>
+        <div class="steps__grid">
+          <div class="steps__card">
+            <span><i class="ri-user-fill"></i></span>
+            <h4>Setup Your Profile</h4>
+            <p>
+              Sign up effortlessly and provide details about your education,
+              skills, interests, and experience. Let our system analyze your
+              strengths to guide your journey.
+            </p>
+          </div>
+          <div class="steps__card">
+            <span><i class="ri-search-fill"></i></span>
+            <h4>Take AI-Powered Assessment</h4>
+            <p>
+              Complete a short, interactive assessment based on your aptitude,
+              aspirations, and abilities to unlock personalized career insights.
+            </p>
+          </div>
+          <div class="steps__card">
+            <span><i class="ri-file-paper-fill"></i></span>
+            <h4>Get Your Career Roadmap</h4>
+            <p>
+              Receive tailored career recommendations along with a step-by-step
+              roadmap to help you reach your professional goals efficiently.
+            </p>
+          </div>
+          <div class="steps__card">
+            <span><i class="ri-briefcase-fill"></i></span>
+            <h4>Plan Your Future & Upskill</h4>
+            <p>
+              Discover growth opportunities, required skills, and upskilling
+              resources to bridge gaps and ensure long-term career success.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container explore__container">
+      <h2 class="section__header">
+        <span>Countless Career Options</span> Are Waiting For You To Explore
+      </h2>
+      <p class="section__description">
+        Discover a World of Exciting Opportunities and Endless Possibilities,
+        and Find the Perfect Career Path to Shape Your Future.
+      </p>
+      <div class="explore__grid">
+        <div
+          onclick="window.location.href='roadmap.html#1'"
+          class="explore__card"
+        >
+          <span><i class="ri-pencil-ruler-2-fill"></i></span>
+          <h4>Engineering & Tech</h4>
+          <p>Software Dev, AI/ML, Cybersecurity, etc.</p>
+        </div>
+        <div
+          onclick="window.location.href='roadmap.html#2'"
+          class="explore__card"
+        >
+          <span><i class="ri-bar-chart-box-fill"></i></span>
+          <h4>Business & Management</h4>
+          <p>Marketing, Sales, HR, Consulting</p>
+        </div>
+        <div
+          onclick="window.location.href='roadmap.html#5'"
+          class="explore__card"
+        >
+          <span><i class="ri-megaphone-fill"></i></span>
+          <h4>Marketing & Sales</h4>
+          <p>marketing, sales and related</p>
+        </div>
+        <div
+          onclick="window.location.href='roadmap.html#4'"
+          class="explore__card"
+        >
+          <span><i class="ri-wallet-3-fill"></i></span>
+          <h4>Finance & Analytics</h4>
+          <p>Data Science, FinTech, Investment Banking</p>
+        </div>
+        <div
+          onclick="window.location.href='roadmap.html#3'"
+          class="explore__card"
+        >
+          <span><i class="ri-car-fill"></i></span>
+          <h4>Education and Training</h4>
+          <p>Teaching and Ed Tech</p>
+        </div>
+        <div
+          onclick="window.location.href='roadmap.html#6'"
+          class="explore__card"
+        >
+          <span><i class="ri-truck-fill"></i></span>
+          <h4>Transport & Logistics Manager</h4>
+          <p>Logistics Executive, Fleet Manager, Supply Chain Director</p>
+        </div>
+        <div
+          onclick="window.location.href='roadmap.html#7'"
+          class="explore__card"
+        >
+          <span><i class="ri-computer-fill"></i></span>
+          <h4>Creative & Media</h4>
+          <p>Design, Content, Digital Marketing</p>
+        </div>
+        <div
+          onclick="window.location.href='roadmap.html#8'"
+          class="explore__card"
+        >
+          <span><i class="ri-building-fill"></i></span>
+          <h4>Healthcare & Research</h4>
+          <p>Biotech, Pharma, Medical Professions</p>
+        </div>
+      </div>
+      <div class="explore__btn">
+        <button class="btn">Get Roadmaps</button>
+      </div>
+    </section>
+
+    <section class="section__container job__container" id="job">
+      <h2 class="section__header">
+        <span>Latest & Top</span> Companies for Working Professional
+      </h2>
+      <p class="section__description">
+        Discover Exciting New Opportunities and High-Demand Positions Available
+        Now in Top Industries and Companies
+      </p>
+
+      <div class="job__grid">
+        <div class="job__card">
+          <div class="job__card__header">
+            <img src="assets/figma.png" alt="job" />
+            <div>
+              <h5>Figma</h5>
+              <h6>USA</h6>
+            </div>
+          </div>
+          <h4>Senior Product Engineer</h4>
+          <p>
+            Lead the development of innovative product solutions, leveraging
+            your expertise in engineering and product management to drive
+            success.
+          </p>
+          <div class="job__card__footer">
+            <span>12 Positions</span>
+            <span>Full Time</span>
+            <span>$1,45,000/Year</span>
+          </div>
+        </div>
+        <div class="job__card">
+          <div class="job__card__header">
+            <img src="assets/google.png" alt="job" />
+            <div>
+              <h5>Google</h5>
+              <h6>USA</h6>
+            </div>
+          </div>
+          <h4>Project Manager</h4>
+          <p>
+            Manage project timelines and budgets to ensure successful delivery
+            of projects on schedule, while maintaining clear communication with
+            stakeholders.
+          </p>
+          <div class="job__card__footer">
+            <span>2 Positions</span>
+            <span>Full Time</span>
+            <span>$95,000/Year</span>
+          </div>
+        </div>
+        <div class="job__card">
+          <div class="job__card__header">
+            <img src="assets/linkedin.png" alt="job" />
+            <div>
+              <h5>LinkedIn</h5>
+              <h6>Germany</h6>
+            </div>
+          </div>
+          <h4>Full Stack Developer</h4>
+          <p>
+            Develop and maintain both front-end and back-end components of web
+            applications, utilizing a wide range of programming languages and
+            frameworks.
+          </p>
+          <div class="job__card__footer">
+            <span>10 Positions</span>
+            <span>Full Time</span>
+            <span>$35,000/Year</span>
+          </div>
+        </div>
+        <div class="job__card">
+          <div class="job__card__header">
+            <img src="assets/amazon.png" alt="job" />
+            <div>
+              <h5>Amazon</h5>
+              <h6>USA</h6>
+            </div>
+          </div>
+          <h4>Front-end Developer</h4>
+          <p>
+            Design and implement user interfaces using HTML, CSS, and
+            JavaScript, collaborating closely with designers and back-end
+            developers.
+          </p>
+          <div class="job__card__footer">
+            <span>20 Positions</span>
+            <span>Full Time</span>
+            <span>$1,01,000/Year</span>
+          </div>
+        </div>
+        <div class="job__card">
+          <div class="job__card__header">
+            <img src="assets/twitter.png" alt="job" />
+            <div>
+              <h5>Twitter</h5>
+              <h6>USA</h6>
+            </div>
+          </div>
+          <h4>ReactJS Developer</h4>
+          <p>
+            Specialize in building dynamic and interactive user interfaces using
+            the ReactJS library, leveraging your expertise in JavaScript and
+            front-end development.
+          </p>
+          <div class="job__card__footer">
+            <span>6 Positions</span>
+            <span>Full Time</span>
+            <span>$98,000/Year</span>
+          </div>
+        </div>
+        <div class="job__card">
+          <div class="job__card__header">
+            <img src="assets/microsoft.png" alt="job" />
+            <div>
+              <h5>Microsoft</h5>
+              <h6>USA</h6>
+            </div>
+          </div>
+          <h4>Python Developer</h4>
+          <p>
+            Develop scalable and efficient backend systems and applications
+            using Python, utilizing your proficiency in Python programming and
+            software development.
+          </p>
+          <div class="job__card__footer">
+            <span>9 Positions</span>
+            <span>Full Time</span>
+            <span>$80,000/Year</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container offer__container" id="service">
+      <h2 class="section__header">What We <span>Offer</span></h2>
+      <p class="section__description">
+        Explore the Benefits and Services We Provide to Enhance Your Perfect
+        Career Search
+      </p>
+      <div class="offer__grid">
+        <div class="offer__card">
+          <img src="assets/a.jpg" height="200" alt="offer" />
+          <div class="offer__details">
+            <span>01</span>
+            <div>
+              <h4>Smart Career Matching</h4>
+              <p>AI-driven suggestions based on your unique profile</p>
+            </div>
+          </div>
+        </div>
+        <div class="offer__card">
+          <img src=" assets/c.jpg" alt="offer" />
+          <div class="offer__details">
+            <span>02</span>
+            <div>
+              <h4>Skill Gap Analysis</h4>
+              <p>Find what you need to learn & improve</p>
+            </div>
+          </div>
+        </div>
+        <div class="offer__card">
+          <img src="assets/b.webp" alt="offer" />
+          <div class="offer__details">
+            <span>03</span>
+            <div>
+              <h4>24/7 Career Chatbot</h4>
+              <p>Get real-time career advice anytime</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container client__container" id="client">
+      <h2 class="section__header">What Our <span>Client Say</span></h2>
+      <p class="section__description">
+        Read Testimonials and Success Stories from Our Satisfied Career Seekers
+        Students and Working Professionals to See How We Make a Difference!
+      </p>
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- ash -->
+          <div class="swiper-slide">
+            <div class="client__card">
+              <img src="https://github.com/ashutosh7i.png" alt="client" />
+              <p>This app helped me start my own Startup, Ash-Technologies, i made me what i always wanted to be,
+                Your friendly neighborhood spiderman🕸️</p>
+              <div class="client__ratings">
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+              </div>
+              <h4>Aashutosh Soni</h4>
+              <h5>Software Engineer</h5>
+            </div>
+          </div>
+          <!-- mish -->
+          <div class="swiper-slide">
+            <div class="client__card">
+              <img src="assets/mymish.jpeg" alt="client" />
+              <p>This platform helped me find my dream job, at my dream Startup, I hate spiders but I love coding🕸️ 🔁</p>
+              <div class="client__ratings">
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+              </div>
+              <h4>Mishthy Soni</h4>
+              <h5>Undergraduate Student</h5>
+            </div>
+          </div>
+          <!-- pooja -->
+          <div class="swiper-slide">
+            <div class="client__card">
+              <img src="assets/pooja.jpeg" alt="client" />
+              <p>
+                This ai platform is a game-changer for job seekers. It's like
+                having a personal career coach in your pocket.
+              </p>
+              <div class="client__ratings">
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+              </div>
+              <h4>Pooja Wanjare</h4>
+              <h5>Undergraduate student</h5>
+            </div>
+          </div>
+
+          <!-- mitali -->
+          <div class="swiper-slide">
+            <div class="client__card">
+              <img src="assets/mitali.jpg" alt="client" />
+              <p>
+                This platform helped me find my dream job. The personalized
+                recommendations and job search tools are amazing.
+              </p>
+              <div class="client__ratings">
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+              </div>
+              <h4>Mitali</h4>
+              <h5>Teacher</h5>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="client__card">
+              <img src="assets/swastika.png" alt="client" />
+              <p>
+                I like the ai platform. It's easy to use and has a lot of great
+                features that help me find the perfect job.
+              </p>
+              <div class="client__ratings">
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+              </div>
+              <h4>Swastika</h4>
+              <h5>Student</h5>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="client__card">
+              <img src="assets/abh.jpeg" alt="client" />
+              <p>
+                This platform made me find my dream job, i liked miusic and i
+                got job in music industry.
+              </p>
+              <div class="client__ratings">
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+              </div>
+              <h4>Abhi Jain</h4>
+              <h5>Musician</h5>
+            </div>
+          </div>
+
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="client__card">
+              <img src="assets/uts.jpg" alt="client" />
+              <p>
+                "I was lost in career choices, but this platform gave me a clear
+                direction. Now I’m on the right track!"
+              </p>
+              <div class="client__ratings">
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+                <span><i class="ri-star-fill"></i></span>
+              </div>
+              <h4>Utsav Kumawat</h4>
+              <h5>Student at MITS-DU</h5>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <div class="footer__logo">
+            <a href="#" class="logo">Career<span>C🧭mpass</span></a>
+          </div>
+          <p>
+            Our platform is designed to help you find the perfect Career and
+            achieve your dreams.
+          </p>
+        </div>
+        <div class="footer__col">
+          <h4>Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Career</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Follow Us</h4>
+          <ul class="footer__links">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Youtube</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Contact Us</h4>
+          <ul class="footer__links">
+            <li>
+              <a href="#">
+                <span><i class="ri-phone-fill"></i></span> +91 234 56788
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span><i class="ri-map-pin-2-fill"></i></span> MITS मुख्य द्वार,
+                गोले का मंदिर
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bar">तब तक के लिये BYE BYE!!</div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        loop: true, // Enable continuous loop mode
+        autoplay: {
+          delay: 3000, // Delay between slides in milliseconds
+          disableOnInteraction: false, // Continue autoplay after user interactions
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>
