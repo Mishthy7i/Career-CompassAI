@@ -54,6 +54,11 @@ Once the server is running, open your browser and visit🚀:
 
 <img width="1885" height="902" alt="Screenshot 2025-07-13 134654" src="https://github.com/user-attachments/assets/7c89eca0-e158-473f-be37-2b175cf69f39" />
 
-## 🎥 Demo Video
+## 🎥 Demo Preview
 
-🎬 [Click here to watch the demo](https://drive.google.com/file/d/1HKFJSOoEIXw8tLzCEc_k0EMFA2BoaSJY/view?usp=sharing)
+Here's a quick look at how **Career Compass AI** works in action:
+
+![Career Compass AI Demo](frontend/assets/demo.gif)
+
+
+
