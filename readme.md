@@ -1,4 +1,4 @@
-# Career Compass AI 🎯🧭
+# Career C🧭mpass AI 🎯
 
 **Career Compass AI** is an AI-powered career guidance system developed as part of the Code Coalescence 2K25 Hackathon at MITS Gwalior. This platform helps students and professionals discover personalized career pathways based on their **aptitude**, **aspirations**, **abilities**, and **experience** using AI-driven recommendations.
 
