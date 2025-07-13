@@ -60,5 +60,6 @@ Here's a quick look at how **Career Compass AI** works in action:
 
 ![Career Compass AI Demo](frontend/assets/demo.gif)
 
-
+## 🎥 Check out the full Project Demo :-
+👉 [Click to view on Google Drive](https://drive.google.com/file/d/1HKFJSOoEIXw8tLzCEc_k0EMFA2BoaSJY/view?usp=drivesdk)
 
